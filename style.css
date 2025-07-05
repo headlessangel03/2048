@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at center, #0f0f0f, #000000);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+}
+
+.game-container {
+  text-align: center;
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #00fff7;
+  backdrop-filter: blur(8px);
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #00ffff;
+}
+
+.glow {
+  color: #ffe600;
+  text-shadow: 0 0 10px #ffe600, 0 0 20px #ff8c00;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.tile {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  transition: 0.2s ease;
+  color: white;
+}
+
+.tile[data-value="2"] { background: #222; color: #ccc; }
+.tile[data-value="4"] { background: #444; color: #ddd; }
+.tile[data-value="8"] { background: #ff8c00; }
+.tile[data-value="16"] { background: #ff6600; }
+.tile[data-value="32"] { background: #ff3300; }
+.tile[data-value="64"] { background: #ff0000; }
+.tile[data-value="128"] { background: #cc00cc; }
+.tile[data-value="256"] { background: #9900cc; }
+.tile[data-value="512"] { background: #6600cc; }
+.tile[data-value="1024"] { background: #3300cc; }
+.tile[data-value="2048"] { background: #00ff99; }
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  background: #00ffcc;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
